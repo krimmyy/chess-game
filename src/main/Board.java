@@ -20,14 +20,20 @@ public class Board {
             for (int col = 0; col < MAX_COL ; col++) {
 
                 if (c == 0) {
-                    g2.setColor(new Color(255, 0, 0));
+                    g2.setColor(new Color(27, 64, 253));
                     c = 1;
                 }
                 else {
-                    g2.setColor(new Color(0, 0, 0));
+                    g2.setColor(new Color(255, 255, 255));
                     c = 0;
                 }
                 g2.fillRect(col * SQUARE_SIZE, row * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
+            }
+
+            if (c == 0) {
+                c = 1;
+            } else {
+                c = 0;
             }
         }
     }
